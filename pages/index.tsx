@@ -41,7 +41,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="h-screen w-full snapod-background text-gray-700 mb-20 border-b">
-        <nav className="flex page xl:pt-10 pt-3 xl:bg-transparent bg-white fixed top-0 w-full xl:relative xl:pb-0 pb-3 xl:shadow-none shadow-sm text-xl items-center justify-center">
+        <nav className="flex page xl:pt-10 pt-3 xl:bg-transparent bg-white fixed z-10 top-0 w-full xl:relative xl:pb-0 pb-3 xl:shadow-none shadow-sm text-xl items-center justify-center">
           <div
             id="snapod-logo"
             className="flex flex-1 gap-x-1.5 font-medium xl:text-xl text-base items-center text-gray-600 justify-center xl:justify-start"
@@ -112,7 +112,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-10 flex justify-center items-center">
-            <div className="flex w-10/12 xl:w-3/12 whitespace-nowrap">
+            <div className="flex join-input-container whitespace-nowrap">
               <input
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -126,13 +126,27 @@ export default function Home() {
                     doJoin();
                   }
                 }}
-                className="rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 xl:py-2 xl:px-5 py-1.5 px-4 text-sm text-white xl:text-base shadow-sm hover:shadow-md"
+                className="xl:block hidden rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 xl:py-2 xl:px-5 py-1.5 px-4 text-sm text-white xl:text-base shadow-sm hover:shadow-md"
               >
                 {processing
                   ? t("headerJoining")
                   : joined
                   ? t("headerJoined")
                   : t("headerJoin")}
+              </button>
+              <button
+                onClick={() => {
+                  if (!joined) {
+                    doJoin();
+                  }
+                }}
+                className="xl:hidden block rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 xl:py-2 xl:px-5 py-1.5 px-4 text-sm text-white xl:text-base shadow-sm hover:shadow-md"
+              >
+                {processing
+                  ? t("headerJoiningSmall")
+                  : joined
+                  ? t("headerJoinedSmall")
+                  : t("headerJoinSmall")}
               </button>
             </div>
           </div>
@@ -220,7 +234,7 @@ export default function Home() {
             </p>
             <img
               src="https://storage.snapaper.com/snapod-analytics-1.png"
-              className="rounded-xl shadow-md"
+              className="rounded-xl shadow-md xl:h-80 xl:w-full"
             />
           </div>
           <div className="rounded-lg bg-gray-100 py-12 px-12 flex-1 text-center snapod-feature-background-1">
@@ -235,7 +249,7 @@ export default function Home() {
             </p>
             <img
               src="https://storage.snapaper.com/snapod-distributions.png"
-              className="rounded-xl shadow-md"
+              className="rounded-xl shadow-md xl:h-80 xl:w-full"
             />
           </div>
         </div>
@@ -250,7 +264,7 @@ export default function Home() {
         </div>
         <div className="grid xl:grid-cols-2 grid-cols-1 gap-8 px-5">
           <div className="rounded-lg bg-gray-100 xl:py-6 py-2 xl:px-12 px-8 flex items-center gap-x-3">
-            <div className="w-32 h-32 transform xl:translate-y-2.5 translate-y-7">
+            <div className="w-32 h-32 flex items-center">
               <img src="/appstore.png" />
             </div>
             <div>
@@ -263,7 +277,7 @@ export default function Home() {
             </div>
           </div>
           <div className="rounded-lg bg-gray-100 xl:py-6 py-2 xl:px-12 px-8 flex items-center gap-x-3.5">
-            <div className="w-32 h-32 transform xl:translate-y-3.5 translate-y-8">
+            <div className="w-32 h-32 transform xl:translate-y-1.5 flex items-center">
               <img src="/microsoftstore.png" />
             </div>
             <div>

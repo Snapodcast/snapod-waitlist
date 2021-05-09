@@ -49,3 +49,13 @@ button,
 input {
   outline: none !important;
 }
+
+.join-input-container {
+  width: 90%;
+}
+
+@media (min-width: 1280px) {
+  .join-input-container {
+    width: 500px;
+  }
+}

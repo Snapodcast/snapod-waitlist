@@ -46,7 +46,8 @@ a {
 }
 
 button,
-input {
+input,
+select {
   outline: none !important;
 }
 

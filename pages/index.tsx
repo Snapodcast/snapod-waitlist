@@ -77,14 +77,16 @@ export default function Home() {
             >
               Twitter
             </a>
-            <a
-              href="https://buttondown.email/helipeng?as_embed=true"
-              target="_blank"
+            <select
+              className="rounded-md bg-gray-300 bg-opacity-50 hover:bg-gray-300 transition-all pt-1 pb-1.5 px-2.5 text-gray-500 text-opacity-75 font-medium text-base"
+              defaultValue={lang}
+              onChange={(e) => {
+                setLanguage(e.target.value);
+              }}
             >
-              <button className="rounded-md bg-gray-300 bg-opacity-50 hover:bg-gray-300 transition-all ml-2 pt-1 pb-1.5 px-3.5 text-gray-500 text-opacity-75 font-medium text-base">
-                {t("navJoin")}
-              </button>
-            </a>
+              <option value="zh-cn">简体中文</option>
+              <option value="en">English</option>
+            </select>
           </div>
         </nav>
         <div className="xl:mt-24 mt-12 xl:pt-0 pt-24">
@@ -333,7 +335,7 @@ export default function Home() {
           <div className="rounded-lg bg-gray-100 py-6 px-8 xl:px-10 flex items-center gap-x-6 xl:col-start-2 xl:col-end-4">
             <div>
               <p className="xl:text-4xl text-3xl font-medium text-gray-600 border-2 border-gray-300 rounded-lg py-2.5 px-4">
-                ￥0
+                $0
               </p>
             </div>
             <div>
@@ -348,7 +350,7 @@ export default function Home() {
           <div className="rounded-lg bg-gray-100 py-6 px-8 xl:px-10 flex items-center gap-x-6 xl:col-start-4 xl:col-end-6">
             <div>
               <p className="xl:text-4xl text-3xl font-medium text-gray-600 border-2 border-gray-300 rounded-lg py-2.5 px-4">
-                ￥5
+                $2.5
               </p>
             </div>
             <div>
@@ -381,7 +383,7 @@ export default function Home() {
       </section>
       <footer className="text-center xl:mt-40 mt-20 mb-10 border-t pt-10 text-gray-600">
         <p className="xl:text-base text-sm">
-          &copy; 2021 Snapodcast | Snapodcast is a project by TonyHe (
+          &copy; 2021 Snapod | Snapod is a project by TonyHe (
           <a
             href="https://twitter.com/ttttonyhe"
             target="_blank"
@@ -391,16 +393,6 @@ export default function Home() {
           </a>
           )
         </p>
-        <select
-          defaultValue={lang}
-          className="mt-2"
-          onChange={(e) => {
-            setLanguage(e.target.value);
-          }}
-        >
-          <option value="zh-cn">简体中文</option>
-          <option value="en">English</option>
-        </select>
       </footer>
     </main>
   );

@@ -160,7 +160,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="xl:pt-48 pt-0 page">
+      <section className="xl:pt-96 pt-0 page">
         <div className="text-center mb-12">
           <p className="text-gray-500 mb-1">Features</p>
           <h1 className="text-3xl font-medium tracking-wide text-gray-700">

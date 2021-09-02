@@ -65,10 +65,10 @@ export default function Home() {
             </a>
             <a
               className="text-base text-gray-600 hover:text-gray-700 transition-all"
-              href="https://github.com/Snapodcast"
+              href="https://status.snapodcast.com"
               target="_blank"
             >
-              Github
+              Status
             </a>
             <a
               className="text-base text-gray-600 hover:text-gray-700 transition-all"

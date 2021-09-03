@@ -179,10 +179,10 @@ export default function Home() {
           </div>
           <div className="rounded-lg bg-gray-100 px-8 py-8">
             <span className="w-10 h-10 flex text-indigo-500">
-              <Icons name="edit" />
+              <Icons name="download" />
             </span>
             <h2 className="text-gray-600 font-medium text-xl mt-3 mb-1">
-              播客管理 / Manage Podcasts
+              播客导入 / Import Podcasts
             </h2>
             <p className="text-gray-500 text-lg">{t("featureDes2")}</p>
           </div>

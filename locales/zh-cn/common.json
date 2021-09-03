@@ -12,7 +12,7 @@
   "headerJoinSmall": "加入 →",
   "feature": "全面的功能覆盖",
   "featureDes1": "只需简单几步，创建播客快速且高效。播客主可快速起步，专注于内容",
-  "featureDes2": "播客信息及元数据 (订阅地址跳转、完结状态等) 支持自定义修改",
+  "featureDes2": "通过 RSS 地址导入已有播客，快速高效迁移至 Snapod",
   "featureDes3": "播客内容、节目将自动实时生成 RSS 链接，以供全渠道同步",
   "featureDes4": "支持季/期数编号归档、MarkDown/富文本节目描述撰写",
   "featureDes5": "音频文件上传无大小限制，同时支持 .mp3, .m4a 格式",

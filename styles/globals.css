@@ -44,6 +44,10 @@ select {
     .join-input-container {
         width: 500px;
     }
+    .nav {
+        background: transparent;
+        backdrop-filter: none;
+    }
 }
 
 .nav {

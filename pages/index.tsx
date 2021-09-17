@@ -41,7 +41,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="h-screen w-full snapod-background text-gray-700 mb-20 border-b">
-        <nav className="flex page xl:pt-10 pt-3 xl:bg-transparent bg-white fixed z-10 top-0 w-full xl:relative xl:pb-0 pb-3 xl:shadow-none shadow-sm text-xl items-center justify-center">
+        <nav className="flex page xl:pt-10 pt-3 xl:bg-transparent bg-white fixed z-10 top-0 w-full xl:relative xl:pb-0 pb-3 xl:shadow-none shadow-sm text-xl items-center justify-center nav">
           <div
             id="snapod-logo"
             className="flex flex-1 gap-x-1.5 font-medium xl:text-xl text-base items-center text-gray-600 justify-center xl:justify-start"
@@ -350,7 +350,7 @@ export default function Home() {
           <div className="rounded-lg bg-gray-100 py-6 px-8 xl:px-10 flex items-center gap-x-6 xl:col-start-4 xl:col-end-6">
             <div>
               <p className="xl:text-4xl text-3xl font-medium text-gray-600 border-2 border-gray-300 rounded-lg py-2.5 px-4">
-                $2.5
+                $5
               </p>
             </div>
             <div>

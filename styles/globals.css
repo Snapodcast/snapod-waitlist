@@ -1,62 +1,52 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .page {
-  max-width: 1280px;
-  margin: 0 auto;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .snapod-background {
-  background-image: linear-gradient(
-    120deg,
-    #ffb64661 0%,
-    rgba(9, 9, 121, 0) 50%,
-    #46d4ff36 100%
-  );
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: linear-gradient( 120deg, #ffb64661 0%, rgba(9, 9, 121, 0) 50%, #46d4ff36 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .snapod-feature-background-1 {
-  background: linear-gradient(
-      0deg,
-      rgba(29, 47, 67, 0.05) 19.16%,
-      rgba(196, 196, 196, 0) 59.55%
-    ),
-    radial-gradient(
-      102.29% 81.78% at 50% 30%,
-      rgba(255, 255, 255, 0) 5%,
-      #d3dbe3 100%
-    );
+    background: linear-gradient( 0deg, rgba(29, 47, 67, 0.05) 19.16%, rgba(196, 196, 196, 0) 59.55%), radial-gradient( 102.29% 81.78% at 50% 30%, rgba(255, 255, 255, 0) 5%, #d3dbe3 100%);
 }
 
 button,
 input,
 select {
-  outline: none !important;
+    outline: none !important;
 }
 
 .join-input-container {
-  width: 90%;
+    width: 90%;
 }
 
 @media (min-width: 1280px) {
-  .join-input-container {
-    width: 500px;
-  }
+    .join-input-container {
+        width: 500px;
+    }
+}
+
+.nav {
+    backdrop-filter: blur(6px);
+    background: rgb(255 255 255 / 70%);
 }

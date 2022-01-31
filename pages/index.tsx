@@ -17,7 +17,7 @@ export default function Home() {
 			method: "post",
 			headers: {
 				"Content-Type": "application/json",
-				Authorization: "Token 110279" + "82-828a-4e06" + "-bd0f-c2566a65a5e7",
+				Authorization: process.env.NEXT_PUBLIC_BUTTONDOWN_TOKEN,
 			},
 			body: JSON.stringify({ email: email, tags: ["Snapod Waitlist"] }),
 		});
@@ -41,16 +41,16 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<section className='h-screen w-full snapod-background text-gray-700 mb-20 border-b'>
-				<nav className='flex page xl:pt-10 pt-3 xl:bg-transparent bg-white fixed z-10 top-0 w-full xl:relative xl:pb-0 pb-3 xl:shadow-none shadow-sm text-xl items-center justify-center nav'>
+				<nav className='flex page xl:pt-10 pt-14 xl:bg-transparent z-10 top-0 w-full xl:relative xl:pb-0 pb-3 shadow-none text-xl items-center justify-center nav'>
 					<div
 						id='snapod-logo'
-						className='flex flex-1 gap-x-1.5 font-medium xl:text-xl text-base items-center text-gray-600 justify-center xl:justify-start'
+						className='flex flex-1 gap-x-1.5 font-medium xl:text-xl text-2xl items-center text-gray-600 justify-center xl:justify-start'
 					>
 						<img
 							src='https://storage.snapaper.com/snapod_logo_v1.png'
-							className='xl:w-10 xl:h-10 w-6 h-6'
+							className='xl:w-10 xl:h-10 w-20 h-20'
 						/>
-						<span>Snapod</span>
+						<span className='hidden xl:block'>Snapod</span>
 					</div>
 					<div
 						id='header-links'
@@ -89,7 +89,7 @@ export default function Home() {
 						</select>
 					</div>
 				</nav>
-				<div className='xl:mt-24 mt-12 xl:pt-0 pt-24'>
+				<div className='xl:mt-24 mt-0 xl:pt-0 pt-4'>
 					<div className='text-center'>
 						<h1
 							className={`xl:text-4xl text-2xl ${
@@ -114,12 +114,12 @@ export default function Home() {
 						</p>
 					</div>
 					<div className='mt-10 flex justify-center items-center'>
-						<div className='flex join-input-container whitespace-nowrap'>
+						<div className='flex join-input-container whitespace-nowrap mx-12'>
 							<input
 								onChange={(e) => {
 									setEmail(e.target.value);
 								}}
-								placeholder='邮箱地址 / Email Address'
+								placeholder={t("email")}
 								className='border transition-all border-gray-300 hover:border-gray-400 shadow-sm xl:py-2 xl:px-5 py-1.5 px-2 xl:pl-4 pl-3 rounded-lg xl:text-base text-sm bg-white flex-1 outline-none focus:shadow-md'
 							/>
 							<button
@@ -153,10 +153,10 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className='mt-20 flex justify-center xl:px-0 px-5'>
+				<div className='mt-20 flex justify-center xl:px-0 px-8'>
 					<img
-						src='https://storage.snapaper.com/snapod-podcast-info.png'
-						className='xl:rounded-3xl rounded-xl shadow-2xl border border-gray-300'
+						src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_004.png'
+						className='xl:rounded-3xl rounded-xl shadow-2xl border border-gray-300 xl:w-[952px]'
 					/>
 				</div>
 			</section>

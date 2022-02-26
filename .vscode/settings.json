@@ -1,5 +1,8 @@
 {
   "cSpell.words": [
     "waitlist"
+  ],
+  "i18n-ally.localesPaths": [
+    "locales"
   ]
 }

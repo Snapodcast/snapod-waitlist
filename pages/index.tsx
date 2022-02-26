@@ -163,7 +163,7 @@ export default function Home() {
 			<section className='xl:pt-96 pt-0 page'>
 				<div className='text-center mb-12'>
 					<p className='text-gray-500 mb-1'>Features</p>
-					<h1 className='text-3xl font-medium tracking-wide text-gray-700'>
+					<h1 className='text-4xl font-medium tracking-wide text-gray-700'>
 						{t("feature")}
 					</h1>
 				</div>
@@ -259,7 +259,7 @@ export default function Home() {
 			<section className='xl:pt-40 pt-24 page'>
 				<div className='text-center mb-12'>
 					<p className='text-gray-500 mb-1'>Clients</p>
-					<h1 className='text-3xl font-medium tracking-wide text-gray-700 mb-1'>
+					<h1 className='text-4xl font-medium tracking-wide text-gray-700 mb-1'>
 						{t("clients")}
 					</h1>
 					<p className='text-gray-400'>{t("clientsDes")}</p>
@@ -316,7 +316,7 @@ export default function Home() {
 			<section className='xl:pt-40 pt-24 page'>
 				<div className='text-center mb-12'>
 					<p className='text-gray-500 mb-1'>Pricing</p>
-					<h1 className='text-3xl font-medium tracking-wide text-gray-700 mb-1'>
+					<h1 className='text-4xl font-medium tracking-wide text-gray-700 mb-1'>
 						{t("pricing")}
 					</h1>
 					<p className='text-gray-400'>{t("pricingDes")}</p>

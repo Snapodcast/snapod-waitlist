@@ -47,7 +47,7 @@ export default function Home() {
 						className='flex flex-1 gap-x-1.5 font-medium xl:text-xl text-2xl items-center text-gray-600 justify-center xl:justify-start'
 					>
 						<img
-							src='https://storage.snapaper.com/snapod_logo_v1.png'
+							src='https://storageapi2.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_logo_v1.png'
 							className='xl:w-10 xl:h-10 w-20 h-20'
 						/>
 						<span className='hidden xl:block'>Snapod</span>
@@ -235,7 +235,7 @@ export default function Home() {
 							{t("featureDes7")}
 						</p>
 						<img
-							src='https://storage.snapaper.com/snapod-analytics-1.png'
+							src='https://storageapi2.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-analytics-1.png'
 							className='rounded-xl shadow-md xl:h-80 xl:w-full'
 						/>
 					</div>
@@ -250,7 +250,7 @@ export default function Home() {
 							{t("featureDes8")}
 						</p>
 						<img
-							src='https://storage.snapaper.com/snapod-distributions.png'
+							src='https://storageapi2.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-distributions.png'
 							className='rounded-xl shadow-md xl:h-80 xl:w-full'
 						/>
 					</div>

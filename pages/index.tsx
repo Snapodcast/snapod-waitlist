@@ -58,10 +58,10 @@ export default function Home() {
 					>
 						<a
 							className='text-base text-gray-600 hover:text-gray-700 transition-all'
-							href='https://www.ouorz.com'
+							href='https://github.com/orgs/Snapodcast/discussions'
 							target='_blank'
 						>
-							{t("blog")}
+							{t("community")}
 						</a>
 						<a
 							className='text-base text-gray-600 hover:text-gray-700 transition-all'

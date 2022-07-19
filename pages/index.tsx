@@ -54,9 +54,19 @@ const Home = () => {
 	return (
 		<main className='animate-fade-in'>
 			<Head>
-				<title>Snapod | {t("headSlogan")}</title>
-				<meta name='description' content={t("headDescription")} />
-				<link rel='icon' href='/favicon.ico' />
+				<title>Snapod{` | ${t("headSlogan")}`}</title>
+				<meta
+					name='description'
+					content='Snapod is a podcast hosting platform dedicated to providing podcast enthusiasts with comprehensive and powerful features and solutions for podcast creation, operation and continuous growth.'
+				/>
+				<meta
+					name='keywords'
+					content='snapod, snapodcast, podcast, podcast hosting, rss, web3, rss3, 声奈波, 播客, 播客平台'
+				/>
+				<link
+					rel='icon'
+					href='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/favicon.ico'
+				/>
 			</Head>
 			<section className='h-screen w-full snapod-background text-gray-700 mb-20 border-b'>
 				<nav className='flex page lg:pt-10 pt-14 lg:bg-transparent z-10 top-0 w-full lg:relative lg:pb-0 pb-3 shadow-none text-xl items-center justify-center nav'>
@@ -285,7 +295,7 @@ const Home = () => {
 				<div className='grid lg:grid-cols-2 grid-cols-1 gap-8 px-5'>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3'>
 						<div className='w-32 h-32 flex items-center'>
-							<img src='/appstore.png' />
+							<img src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/appstore.png' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
@@ -298,7 +308,7 @@ const Home = () => {
 					</div>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3.5'>
 						<div className='w-32 h-32 transform lg:translate-y-1.5 flex items-center'>
-							<img src='/microsoftstore.png' />
+							<img src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/microsoftstore.png' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>

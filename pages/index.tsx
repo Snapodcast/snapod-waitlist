@@ -27,9 +27,7 @@ export default function Home() {
 		if (data.creation_date) {
 			setJoined(true);
 		} else {
-			alert(
-				"暂时无法将你加入内测等候名单\nCannot add you to the wait list just now"
-			);
+			alert(t("cannotJoin"));
 		}
 	};
 
@@ -41,20 +39,20 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<section className='h-screen w-full snapod-background text-gray-700 mb-20 border-b'>
-				<nav className='flex page xl:pt-10 pt-14 xl:bg-transparent z-10 top-0 w-full xl:relative xl:pb-0 pb-3 shadow-none text-xl items-center justify-center nav'>
+				<nav className='flex page lg:pt-10 pt-14 lg:bg-transparent z-10 top-0 w-full lg:relative lg:pb-0 pb-3 shadow-none text-xl items-center justify-center nav'>
 					<div
 						id='snapod-logo'
-						className='flex flex-1 gap-x-1.5 font-medium xl:text-xl text-2xl items-center text-gray-600 justify-center xl:justify-start'
+						className='flex flex-1 gap-x-1.5 font-medium lg:text-xl text-2xl items-center text-gray-600 justify-center lg:justify-start'
 					>
 						<img
 							src='https://storageapi2.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_logo_v1.png'
-							className='xl:w-10 xl:h-10 w-20 h-20'
+							className='lg:w-10 lg:h-10 w-20 h-20'
 						/>
-						<span className='hidden xl:block'>Snapod</span>
+						<span className='hidden lg:block'>Snapod</span>
 					</div>
 					<div
 						id='header-links'
-						className='justify-evenly whitespace-nowrap items-center gap-x-6 hidden xl:flex'
+						className='justify-evenly whitespace-nowrap items-center gap-x-6 hidden lg:flex'
 					>
 						<a
 							className='text-base text-gray-600 hover:text-gray-700 transition-all'
@@ -89,24 +87,24 @@ export default function Home() {
 						</select>
 					</div>
 				</nav>
-				<div className='xl:mt-24 mt-0 xl:pt-0 pt-4'>
+				<div className='lg:mt-24 mt-0 lg:pt-0 pt-4'>
 					<div className='text-center'>
 						<h1
-							className={`xl:text-4xl text-2xl ${
+							className={`lg:text-4xl text-2xl ${
 								lang === "zh-cn" ? "font-medium tracking-wider" : "font-bold"
-							} xl:mb-4 mb-3`}
+							} lg:mb-4 mb-3`}
 						>
 							{t("headSlogan")}
 						</h1>
 						<p
-							className={`xl:text-2xl text-sm text-gray-500 ${
+							className={`lg:text-2xl text-sm text-gray-500 ${
 								lang === "zh-cn" ? "tracking-widest" : "tracking-wide"
 							} mb-1`}
 						>
 							{t("headerDes1")}
 						</p>
 						<p
-							className={`xl:text-2xl text-sm text-gray-500 ${
+							className={`lg:text-2xl text-sm text-gray-500 capitalize ${
 								lang === "zh-cn" ? "tracking-widest" : "tracking-wide"
 							}`}
 						>
@@ -120,7 +118,7 @@ export default function Home() {
 									setEmail(e.target.value);
 								}}
 								placeholder={t("email")}
-								className='border transition-all border-gray-300 hover:border-gray-400 shadow-sm xl:py-2 xl:px-5 py-1.5 px-2 xl:pl-4 pl-3 rounded-lg xl:text-base text-sm bg-white flex-1 outline-none focus:shadow-md'
+								className='border transition-all border-gray-300 hover:border-gray-400 shadow-sm lg:py-2 lg:px-5 py-1.5 px-2 lg:pl-4 pl-3 rounded-lg lg:text-base text-sm bg-white flex-1 outline-none focus:shadow-md'
 							/>
 							<button
 								onClick={() => {
@@ -128,7 +126,7 @@ export default function Home() {
 										doJoin();
 									}
 								}}
-								className='xl:block hidden rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 xl:py-2 xl:px-5 py-1.5 px-4 text-sm text-white xl:text-base shadow-sm hover:shadow-md'
+								className='lg:block lg:min-w-[172.63px] hidden rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 lg:py-2 lg:px-5 py-1.5 px-4 text-sm text-white lg:text-base shadow-sm hover:shadow-md'
 							>
 								{processing
 									? t("headerJoining")
@@ -142,7 +140,7 @@ export default function Home() {
 										doJoin();
 									}
 								}}
-								className='xl:hidden block rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 xl:py-2 xl:px-5 py-1.5 px-4 text-sm text-white xl:text-base shadow-sm hover:shadow-md'
+								className='lg:hidden block rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 lg:py-2 lg:px-5 py-1.5 px-4 text-sm text-white lg:text-base shadow-sm hover:shadow-md'
 							>
 								{processing
 									? t("headerJoiningSmall")
@@ -153,27 +151,27 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className='mt-20 flex justify-center xl:px-0 px-8'>
+				<div className='mt-20 flex justify-center lg:px-0 px-8'>
 					<img
-						src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_004.png'
-						className='xl:rounded-3xl rounded-xl shadow-2xl border border-gray-300 xl:w-[952px]'
+						src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-editing-episodes.png'
+						className='lg:rounded-3xl rounded-xl shadow-2xl border border-gray-300 lg:w-[952px]'
 					/>
 				</div>
 			</section>
-			<section className='xl:pt-96 pt-0 page'>
+			<section className='lg:pt-96 pt-0 page'>
 				<div className='text-center mb-12'>
 					<p className='text-gray-500 mb-1'>Features</p>
 					<h1 className='text-4xl font-medium tracking-wide text-gray-700'>
 						{t("feature")}
 					</h1>
 				</div>
-				<div className='grid xl:grid-cols-3 grid-cols-1 gap-8 px-5'>
+				<div className='grid lg:grid-cols-3 grid-cols-1 gap-8 px-5'>
 					<div className='rounded-lg bg-gray-100 px-8 py-8'>
 						<span className='w-10 h-10 flex text-red-500'>
 							<Icons name='add' />
 						</span>
 						<h2 className='text-gray-600 font-medium text-xl mt-3 mb-1'>
-							播客创建 / Create Podcasts
+							{t("createPodcasts")}
 						</h2>
 						<p className='text-gray-500 text-lg'>{t("featureDes1")}</p>
 					</div>
@@ -182,7 +180,7 @@ export default function Home() {
 							<Icons name='download' />
 						</span>
 						<h2 className='text-gray-600 font-medium text-xl mt-3 mb-1'>
-							播客导入 / Import Podcasts
+							{t("importPodcasts")}
 						</h2>
 						<p className='text-gray-500 text-lg'>{t("featureDes2")}</p>
 					</div>
@@ -191,7 +189,7 @@ export default function Home() {
 							<Icons name='rss' />
 						</span>
 						<h2 className='text-gray-600 font-medium text-xl mt-3 mb-1'>
-							RSS 地址 / Feed URL
+							{t("rss")}
 						</h2>
 						<p className='text-gray-500 text-lg'>{t("featureDes3")}</p>
 					</div>
@@ -200,7 +198,7 @@ export default function Home() {
 							<Icons name='episodes' />
 						</span>
 						<h2 className='text-gray-600 font-medium text-xl mt-3 mb-1'>
-							节目管理 / Manage Episodes
+							{t("manageEpisodes")}
 						</h2>
 						<p className='text-gray-500 text-lg'>{t("featureDes4")}</p>
 					</div>
@@ -209,7 +207,7 @@ export default function Home() {
 							<Icons name='music' />
 						</span>
 						<h2 className='text-gray-600 font-medium text-xl mt-3 mb-1'>
-							音频储存 / Audio Files
+							{t("storeAudio")}
 						</h2>
 						<p className='text-gray-500 text-lg'>{t("featureDes5")}</p>
 					</div>
@@ -218,25 +216,25 @@ export default function Home() {
 							<Icons name='globe' />
 						</span>
 						<h2 className='text-gray-600 font-medium text-xl mt-3 mb-1'>
-							独立站点 / Snapod Sites
+							{t("snapodSites")}
 						</h2>
 						<p className='text-gray-500 text-lg'>{t("featureDes6")}</p>
 					</div>
 				</div>
-				<div className='flex mt-16 px-5 gap-8 xl:flex-row flex-col'>
+				<div className='flex mt-16 px-5 gap-8 lg:flex-row flex-col'>
 					<div className='rounded-lg bg-gray-100 py-12 px-12 flex-1 text-center snapod-feature-background-1'>
 						<span className='w-12 h-12 flex text-green-500 mx-auto'>
 							<Icons name='char-square' />
 						</span>
 						<h2 className='text-gray-600 font-medium text-2xl mt-2 mb-2'>
-							数据统计 / Snapod Analytics
+							{t("snapodAnalytics")}
 						</h2>
-						<p className='text-gray-500 xl:text-lg text-base xl:px-10 px-0 mb-10'>
+						<p className='text-gray-500 lg:text-lg text-base lg:px-10 px-0 mb-10'>
 							{t("featureDes7")}
 						</p>
 						<img
-							src='https://storageapi2.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-analytics-1.png'
-							className='rounded-xl shadow-md xl:h-80 xl:w-full'
+							src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-analytics.png'
+							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
 					<div className='rounded-lg bg-gray-100 py-12 px-12 flex-1 text-center snapod-feature-background-1'>
@@ -244,19 +242,19 @@ export default function Home() {
 							<Icons name='upload' />
 						</span>
 						<h2 className='text-gray-600 font-medium text-2xl mt-2 mb-2'>
-							渠道发布 / Distributions
+							{t("distributions")}
 						</h2>
-						<p className='text-gray-500 xl:text-lg text-base xl:px-10 px-0 mb-10'>
+						<p className='text-gray-500 lg:text-lg text-base lg:px-10 px-0 mb-10'>
 							{t("featureDes8")}
 						</p>
 						<img
-							src='https://storageapi2.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-distributions.png'
-							className='rounded-xl shadow-md xl:h-80 xl:w-full'
+							src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/distributions.png'
+							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
 				</div>
 			</section>
-			<section className='xl:pt-40 pt-24 page'>
+			<section className='lg:pt-40 pt-24 page'>
 				<div className='text-center mb-12'>
 					<p className='text-gray-500 mb-1'>Clients</p>
 					<h1 className='text-4xl font-medium tracking-wide text-gray-700 mb-1'>
@@ -264,56 +262,56 @@ export default function Home() {
 					</h1>
 					<p className='text-gray-400'>{t("clientsDes")}</p>
 				</div>
-				<div className='grid xl:grid-cols-2 grid-cols-1 gap-8 px-5'>
-					<div className='rounded-lg bg-gray-100 xl:py-6 py-2 xl:px-12 px-8 flex items-center gap-x-3'>
+				<div className='grid lg:grid-cols-2 grid-cols-1 gap-8 px-5'>
+					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3'>
 						<div className='w-32 h-32 flex items-center'>
 							<img src='/appstore.png' />
 						</div>
 						<div>
-							<h2 className='text-xl xl:text-2xl font-medium text-gray-600 mb-1'>
+							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
 								{t("macos")}
 							</h2>
-							<p className='text-base xl:text-lg text-gray-500'>
+							<p className='text-base lg:text-lg text-gray-500'>
 								{t("macosDes")}
 							</p>
 						</div>
 					</div>
-					<div className='rounded-lg bg-gray-100 xl:py-6 py-2 xl:px-12 px-8 flex items-center gap-x-3.5'>
-						<div className='w-32 h-32 transform xl:translate-y-1.5 flex items-center'>
+					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3.5'>
+						<div className='w-32 h-32 transform lg:translate-y-1.5 flex items-center'>
 							<img src='/microsoftstore.png' />
 						</div>
 						<div>
-							<h2 className='text-xl xl:text-2xl font-medium text-gray-600 mb-1'>
+							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
 								{t("windows")}
 							</h2>
-							<p className='text-base xl:text-lg text-gray-500'>
+							<p className='text-base lg:text-lg text-gray-500'>
 								{t("windowsDes")}
 							</p>
 						</div>
 					</div>
-					<div className='rounded-lg bg-gray-50 border xl:p-12 p-8'>
+					<div className='rounded-lg bg-gray-50 border lg:p-12 p-8'>
 						<div>
-							<h2 className='text-xl xl:text-2xl font-medium text-gray-600 mb-1'>
+							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
 								{t("web")}
 							</h2>
-							<p className='text-base xl:text-lg text-gray-500'>
+							<p className='text-base lg:text-lg text-gray-500'>
 								{t("webDes")}
 							</p>
 						</div>
 					</div>
-					<div className='rounded-lg bg-gray-50 border xl:p-12 p-8'>
+					<div className='rounded-lg bg-gray-50 border lg:p-12 p-8'>
 						<div>
-							<h2 className='text-xl xl:text-2xl font-medium text-gray-600 mb-1'>
+							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
 								{t("mobile")}
 							</h2>
-							<p className='text-base xl:text-lg text-gray-500'>
+							<p className='text-base lg:text-lg text-gray-500'>
 								{t("mobileDes")}
 							</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section className='xl:pt-40 pt-24 page'>
+			{/* <section className='lg:pt-40 pt-24 page'>
 				<div className='text-center mb-12'>
 					<p className='text-gray-500 mb-1'>Pricing</p>
 					<h1 className='text-4xl font-medium tracking-wide text-gray-700 mb-1'>
@@ -321,50 +319,50 @@ export default function Home() {
 					</h1>
 					<p className='text-gray-400'>{t("pricingDes")}</p>
 				</div>
-				<div className='grid xl:grid-cols-5 grid-cols-1 gap-4 px-5'>
-					<div className='rounded-lg bg-gray-100 py-6 px-8 xl:px-10 flex items-center gap-x-6'>
+				<div className='grid lg:grid-cols-5 grid-cols-1 gap-4 px-5'>
+					<div className='rounded-lg bg-gray-100 py-6 px-8 lg:px-10 flex items-center gap-x-6'>
 						<div>
-							<h2 className='text-xl xl:text-2xl font-medium text-gray-600 mb-1'>
+							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
 								{t("priceName1")}
 							</h2>
-							<p className='text-base xl:text-lg text-gray-500'>
+							<p className='text-base lg:text-lg text-gray-500'>
 								{t("priceDes1")}
 							</p>
 						</div>
 					</div>
-					<div className='rounded-lg bg-gray-100 py-6 px-8 xl:px-10 flex items-center gap-x-6 xl:col-start-2 xl:col-end-4'>
+					<div className='rounded-lg bg-gray-100 py-6 px-8 lg:px-10 flex items-center gap-x-6 lg:col-start-2 lg:col-end-4'>
 						<div>
-							<p className='xl:text-4xl text-3xl font-medium text-gray-600 border-2 border-gray-300 rounded-lg py-2.5 px-4'>
+							<p className='lg:text-4xl text-3xl font-medium text-gray-600 border-2 border-gray-300 rounded-lg py-2.5 px-4'>
 								$0
 							</p>
 						</div>
 						<div>
-							<h2 className='text-xl xl:text-2xl font-medium text-gray-600 mb-1'>
+							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
 								{t("priceName2")}
 							</h2>
-							<p className='text-base xl:text-lg text-gray-500'>
+							<p className='text-base lg:text-lg text-gray-500'>
 								{t("priceDes2")}
 							</p>
 						</div>
 					</div>
-					<div className='rounded-lg bg-gray-100 py-6 px-8 xl:px-10 flex items-center gap-x-6 xl:col-start-4 xl:col-end-6'>
+					<div className='rounded-lg bg-gray-100 py-6 px-8 lg:px-10 flex items-center gap-x-6 lg:col-start-4 lg:col-end-6'>
 						<div>
-							<p className='xl:text-4xl text-3xl font-medium text-gray-600 border-2 border-gray-300 rounded-lg py-2.5 px-4'>
+							<p className='lg:text-4xl text-3xl font-medium text-gray-600 border-2 border-gray-300 rounded-lg py-2.5 px-4'>
 								$5
 							</p>
 						</div>
 						<div>
-							<h2 className='text-xl xl:text-2xl font-medium text-gray-600 mb-1'>
+							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
 								{t("priceName3")}
 							</h2>
-							<p className='text-base xl:text-lg text-gray-500'>
+							<p className='text-base lg:text-lg text-gray-500'>
 								{t("priceDes3")}
 							</p>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section className='xl:pt-40 pt-24 page flex items-center justify-center'>
+			</section> */}
+			{/* <section className='lg:pt-40 pt-24 page flex items-center justify-center'>
 				<div className='flex gap-x-3'>
 					<a href='#'>
 						<button className='rounded-md bg-gray-300 bg-opacity-50 hover:bg-gray-300 transition-all ml-2 pt-1 pb-1.5 px-3.5 text-gray-500 text-opacity-75 font-medium text-base'>
@@ -380,9 +378,16 @@ export default function Home() {
 						</button>
 					</a>
 				</div>
+			</section> */}
+			<section className='lg:pt-40 pt-24 page flex items-center justify-center'>
+				<a href='#'>
+					<button className='rounded-md bg-gray-300 bg-opacity-50 hover:bg-gray-300 transition-all ml-2 py-2 px-5 text-gray-500 text-opacity-75 font-medium text-lg'>
+						{t("comingSoon")}
+					</button>
+				</a>
 			</section>
-			<footer className='text-center xl:mt-40 mt-20 mb-10 border-t pt-10 text-gray-600'>
-				<p className='xl:text-base text-sm'>
+			<footer className='text-center lg:mt-40 mt-20 mb-10 border-t pt-10 text-gray-600'>
+				<p className='lg:text-base text-sm'>
 					&copy; 2021 Snapod | Snapod is a project by TonyHe (
 					<a
 						href='https://twitter.com/ttttonyhe'

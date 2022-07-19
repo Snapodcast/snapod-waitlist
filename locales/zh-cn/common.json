@@ -42,5 +42,15 @@
 	"priceName3": "创作者计划",
 	"priceDes3": "域名绑定、主题选择、音频转码可用",
 	"backToTop": "回到顶部 ↑",
-	"community": "用户社区"
+	"community": "用户社区",
+	"cannotJoin": "暂时无法将你加入内测等候名单",
+	"createPodcasts": "播客创建",
+	"importPodcasts": "播客导入",
+	"rss": "RSS 地址生成",
+	"manageEpisodes": "节目管理",
+	"storeAudio": "音频云储存",
+	"snapodSites": "独立站点",
+	"snapodAnalytics": "收听数据统计",
+	"distributions": "多渠道发布",
+	"comingSoon": "敬请期待 ↑"
 }

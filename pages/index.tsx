@@ -52,7 +52,7 @@ const Home = () => {
 	};
 
 	return (
-		<main className="animate-fade-in">
+		<main className='animate-fade-in'>
 			<Head>
 				<title>Snapod | {t("headSlogan")}</title>
 				<meta name='description' content={t("headDescription")} />

@@ -1,11 +1,31 @@
 import Head from "next/head";
-import React from "react";
-import useTranslation from "next-translate/useTranslation";
-import setLanguage from "next-translate/setLanguage";
+import React, { useState } from "react";
+import { getCookie, setCookie } from "cookies-next";
 import Icons from "../components/Icons";
+import en from "../locales/en/common.json";
+import zh from "../locales/zh-cn/common.json";
 
-export default function Home() {
-	const { t, lang } = useTranslation("common");
+const Home = () => {
+	// i18n
+	const langFromCookie = getCookie("snapod-lang");
+	const [lang, setLang] = useState<string>(
+		langFromCookie ? langFromCookie.toString() : "en"
+	);
+	const t = (key: string) => {
+		switch (lang) {
+			case "en":
+				return en[key];
+			case "zh":
+				return zh[key];
+			default:
+				return en[key];
+		}
+	};
+	const changeLang = (lang: string) => {
+		setLang(lang);
+		setCookie("snapod-lang", lang, { maxAge: 365 * 24 * 60 * 60 });
+	};
+
 	const [email, setEmail] = React.useState<string>("");
 	const [joined, setJoined] = React.useState<boolean>(false);
 	const [processing, setProcessing] = React.useState<boolean>(false);
@@ -79,10 +99,10 @@ export default function Home() {
 							className='rounded-md bg-gray-300 bg-opacity-50 hover:bg-gray-300 transition-all pt-1 pb-1.5 px-2.5 text-gray-500 text-opacity-75 font-medium text-base'
 							defaultValue={lang}
 							onChange={(e) => {
-								setLanguage(e.target.value);
+								changeLang(e.target.value);
 							}}
 						>
-							<option value='zh-cn'>简体中文</option>
+							<option value='zh'>简体中文</option>
 							<option value='en'>English</option>
 						</select>
 					</div>
@@ -401,4 +421,6 @@ export default function Home() {
 			</footer>
 		</main>
 	);
-}
+};
+
+export default Home;

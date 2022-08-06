@@ -6,11 +6,11 @@ import en from "../locales/en/common.json";
 import zh from "../locales/zh-cn/common.json";
 
 const Home = () => {
-	// i18n
 	const langFromCookie = getCookie("snapod-lang");
 	const [lang, setLang] = useState<string>(
 		langFromCookie ? langFromCookie.toString() : "en"
 	);
+
 	const t = (key: string) => {
 		switch (lang) {
 			case "en":
@@ -21,6 +21,7 @@ const Home = () => {
 				return en[key];
 		}
 	};
+
 	const changeLang = (lang: string) => {
 		setLang(lang);
 		setCookie("snapod-lang", lang, { maxAge: 365 * 24 * 60 * 60 });
@@ -65,7 +66,7 @@ const Home = () => {
 				/>
 				<link
 					rel='icon'
-					href='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/favicon.ico'
+					href='https://bafybeicwffxjrgnhymmwnso7t7omgyl4wxifhdh4rz3mfvdzrw7by6f4gy.ipfs.dweb.link'
 				/>
 			</Head>
 			<section className='h-screen w-full snapod-background text-gray-700 mb-20 border-b'>
@@ -75,7 +76,7 @@ const Home = () => {
 						className='flex flex-1 gap-x-1.5 font-medium lg:text-xl text-2xl items-center text-gray-600 justify-center lg:justify-start'
 					>
 						<img
-							src='https://storageapi2.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_logo_v1.png'
+							src='https://bafybeiarebuanfbkbkzappwi4qgilzotu7zofgfa3siztfjcmkj6hwpeuu.ipfs.dweb.link'
 							className='lg:w-10 lg:h-10 w-20 h-20'
 						/>
 						<span className='hidden lg:block'>Snapod</span>
@@ -183,7 +184,7 @@ const Home = () => {
 				</div>
 				<div className='mt-20 flex justify-center lg:px-0 px-8'>
 					<img
-						src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-editing-episodes.png'
+						src='https://bafybeib3lgwucqeyagc2bw5z4xga5djkjb5zfm4hfbnn3l7xswnhuganwi.ipfs.dweb.link'
 						className='lg:rounded-3xl rounded-xl shadow-2xl border border-gray-300 lg:w-[952px]'
 					/>
 				</div>
@@ -263,7 +264,7 @@ const Home = () => {
 							{t("featureDes7")}
 						</p>
 						<img
-							src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-analytics.png'
+							src='https://bafybeidjryjybtohcn3kiyubpku7iffvhvn3qypwmrujzqmzl5mabqgzwm.ipfs.dweb.link'
 							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
@@ -278,7 +279,7 @@ const Home = () => {
 							{t("featureDes8")}
 						</p>
 						<img
-							src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/distributions.png'
+							src='https://bafybeifcrpqesje46lyfazu6rmfuoiche6fvwlgkh5xgbrquuz2dn7kqve.ipfs.dweb.link'
 							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
@@ -295,7 +296,7 @@ const Home = () => {
 				<div className='grid lg:grid-cols-2 grid-cols-1 gap-8 px-5'>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3'>
 						<div className='w-32 h-32 flex items-center'>
-							<img src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/appstore.png' />
+							<img src='https://bafybeifjinqe3o4spdxaiuoeddqcbv7fj4thq766uq5nyqubzugxfe3m7q.ipfs.dweb.link' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
@@ -308,7 +309,7 @@ const Home = () => {
 					</div>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3.5'>
 						<div className='w-32 h-32 transform lg:translate-y-1.5 flex items-center'>
-							<img src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/microsoftstore.png' />
+							<img src='https://bafybeibkcnya3dkuuuchw7euvur4p4f2syqbfaab72kspzc6kpgqrmtsiu.ipfs.dweb.link' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>

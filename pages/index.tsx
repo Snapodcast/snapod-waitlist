@@ -6,11 +6,11 @@ import en from "../locales/en/common.json";
 import zh from "../locales/zh-cn/common.json";
 
 const Home = () => {
-	// i18n
 	const langFromCookie = getCookie("snapod-lang");
 	const [lang, setLang] = useState<string>(
 		langFromCookie ? langFromCookie.toString() : "en"
 	);
+	
 	const t = (key: string) => {
 		switch (lang) {
 			case "en":
@@ -21,6 +21,7 @@ const Home = () => {
 				return en[key];
 		}
 	};
+
 	const changeLang = (lang: string) => {
 		setLang(lang);
 		setCookie("snapod-lang", lang, { maxAge: 365 * 24 * 60 * 60 });
@@ -32,7 +33,6 @@ const Home = () => {
 
 	const doJoin = async () => {
 		setProcessing(true);
-
 		const res = await fetch("https://api.buttondown.email/v1/subscribers", {
 			method: "post",
 			headers: {
@@ -42,7 +42,6 @@ const Home = () => {
 			body: JSON.stringify({ email: email, tags: ["Snapod Waitlist"] }),
 		});
 		const data = await res.json();
-
 		setProcessing(false);
 		if (data.creation_date) {
 			setJoined(true);
@@ -65,7 +64,7 @@ const Home = () => {
 				/>
 				<link
 					rel='icon'
-					href='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/favicon.ico'
+					href='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/favicon.ico'
 				/>
 			</Head>
 			<section className='h-screen w-full snapod-background text-gray-700 mb-20 border-b'>
@@ -75,7 +74,7 @@ const Home = () => {
 						className='flex flex-1 gap-x-1.5 font-medium lg:text-xl text-2xl items-center text-gray-600 justify-center lg:justify-start'
 					>
 						<img
-							src='https://storageapi2.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_logo_v1.png'
+							src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_logo_v1.png'
 							className='lg:w-10 lg:h-10 w-20 h-20'
 						/>
 						<span className='hidden lg:block'>Snapod</span>
@@ -183,7 +182,7 @@ const Home = () => {
 				</div>
 				<div className='mt-20 flex justify-center lg:px-0 px-8'>
 					<img
-						src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-editing-episodes.png'
+						src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-editing-episodes.png'
 						className='lg:rounded-3xl rounded-xl shadow-2xl border border-gray-300 lg:w-[952px]'
 					/>
 				</div>
@@ -263,7 +262,7 @@ const Home = () => {
 							{t("featureDes7")}
 						</p>
 						<img
-							src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-analytics.png'
+							src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-analytics.png'
 							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
@@ -278,7 +277,7 @@ const Home = () => {
 							{t("featureDes8")}
 						</p>
 						<img
-							src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/distributions.png'
+							src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/distributions.png'
 							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
@@ -295,7 +294,7 @@ const Home = () => {
 				<div className='grid lg:grid-cols-2 grid-cols-1 gap-8 px-5'>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3'>
 						<div className='w-32 h-32 flex items-center'>
-							<img src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/appstore.png' />
+							<img src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/appstore.png' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
@@ -308,7 +307,7 @@ const Home = () => {
 					</div>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3.5'>
 						<div className='w-32 h-32 transform lg:translate-y-1.5 flex items-center'>
-							<img src='https://storageapi.fleek.co/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/microsoftstore.png' />
+							<img src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/microsoftstore.png' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
@@ -418,7 +417,7 @@ const Home = () => {
 			</section>
 			<footer className='text-center lg:mt-40 mt-20 mb-10 border-t pt-10 text-gray-600'>
 				<p className='lg:text-base text-sm'>
-					&copy; 2021 Snapod | Snapod is a project by TonyHe (
+					&copy; 2021 Snapod | A project by Tony He (
 					<a
 						href='https://twitter.com/ttttonyhe'
 						target='_blank'

@@ -10,7 +10,7 @@ const Home = () => {
 	const [lang, setLang] = useState<string>(
 		langFromCookie ? langFromCookie.toString() : "en"
 	);
-	
+
 	const t = (key: string) => {
 		switch (lang) {
 			case "en":
@@ -50,10 +50,12 @@ const Home = () => {
 		}
 	};
 
+	const title = `Snapod | ${t("headSlogan")}`;
+
 	return (
 		<main className='animate-fade-in'>
 			<Head>
-				<title>Snapod{` | ${t("headSlogan")}`}</title>
+				<title>{title || "Snapod"}</title>
 				<meta
 					name='description'
 					content='Snapod is a podcast hosting platform dedicated to providing podcast enthusiasts with comprehensive and powerful features and solutions for podcast creation, operation and continuous growth.'

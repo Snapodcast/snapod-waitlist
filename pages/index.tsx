@@ -66,7 +66,7 @@ const Home = () => {
 				/>
 				<link
 					rel='icon'
-					href='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/favicon.ico'
+					href='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/favicon.ico'
 				/>
 			</Head>
 			<section className='h-screen w-full snapod-background text-gray-700 mb-20 border-b'>
@@ -76,7 +76,7 @@ const Home = () => {
 						className='flex flex-1 gap-x-1.5 font-medium lg:text-xl text-2xl items-center text-gray-600 justify-center lg:justify-start'
 					>
 						<img
-							src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_logo_v1.png'
+							src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_logo_v1.png'
 							className='lg:w-10 lg:h-10 w-20 h-20'
 						/>
 						<span className='hidden lg:block'>Snapod</span>
@@ -184,7 +184,7 @@ const Home = () => {
 				</div>
 				<div className='mt-20 flex justify-center lg:px-0 px-8'>
 					<img
-						src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-editing-episodes.png'
+						src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-editing-episodes.png'
 						className='lg:rounded-3xl rounded-xl shadow-2xl border border-gray-300 lg:w-[952px]'
 					/>
 				</div>
@@ -264,7 +264,7 @@ const Home = () => {
 							{t("featureDes7")}
 						</p>
 						<img
-							src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-analytics.png'
+							src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-analytics.png'
 							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
@@ -279,7 +279,7 @@ const Home = () => {
 							{t("featureDes8")}
 						</p>
 						<img
-							src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/distributions.png'
+							src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/distributions.png'
 							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
@@ -296,7 +296,7 @@ const Home = () => {
 				<div className='grid lg:grid-cols-2 grid-cols-1 gap-8 px-5'>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3'>
 						<div className='w-32 h-32 flex items-center'>
-							<img src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/appstore.png' />
+							<img src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/appstore.png' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
@@ -309,7 +309,7 @@ const Home = () => {
 					</div>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3.5'>
 						<div className='w-32 h-32 transform lg:translate-y-1.5 flex items-center'>
-							<img src='https://storageapi.fleek.one/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/microsoftstore.png' />
+							<img src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/microsoftstore.png' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>

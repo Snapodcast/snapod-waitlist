@@ -87,6 +87,13 @@ const Home = () => {
 					>
 						<a
 							className='text-base text-gray-600 hover:text-gray-700 transition-all'
+							href='https://app.snapodcast.com'
+							target='_blank'
+						>
+							{t("alpha")}
+						</a>
+						<a
+							className='text-base text-gray-600 hover:text-gray-700 transition-all'
 							href='https://github.com/orgs/Snapodcast/discussions'
 							target='_blank'
 						>

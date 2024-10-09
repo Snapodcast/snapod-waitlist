@@ -33,20 +33,32 @@ const Home = () => {
 
 	const doJoin = async () => {
 		setProcessing(true);
-		const res = await fetch("https://api.buttondown.email/v1/subscribers", {
-			method: "post",
-			headers: {
-				"Content-Type": "application/json",
-				Authorization: process.env.NEXT_PUBLIC_BUTTONDOWN_TOKEN,
-			},
-			body: JSON.stringify({ email: email, tags: ["Snapod Waitlist"] }),
-		});
-		const data = await res.json();
-		setProcessing(false);
-		if (data.creation_date) {
-			setJoined(true);
-		} else {
-			alert(t("cannotJoin"));
+
+		try {
+			const res = await fetch(
+				"https://lists.lipeng.ac/api/public/subscription",
+				{
+					method: "post",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						email: email,
+						name: email.split("@")[0],
+						list_uuids: ["060f023e-8c73-4c4a-b57b-df4b6d6eb3bf"],
+					}),
+				}
+			);
+			const data = await res.json();
+			setProcessing(false);
+			if (data.data) {
+				setJoined(true);
+			} else {
+				alert(t("cannotJoin"));
+			}
+		} catch (error) {
+			console.error(error);
+			setProcessing(false);
 		}
 	};
 

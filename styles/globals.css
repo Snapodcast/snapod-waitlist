@@ -1,66 +1,73 @@
-html,
-body {
-	padding: 0;
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import "tailwindcss";
+
+@theme {
+	--animate-fade-in: 200ms ease 0s 1 normal none running fade-in;
+
+	@keyframes fade-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 }
 
-a {
-	color: inherit;
-	text-decoration: none;
-}
+@layer base {
+	html,
+	body {
+		padding: 0;
+		margin: 0;
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+			Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	}
 
-* {
-	box-sizing: border-box;
-}
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
 
-.page {
-	max-width: 1280px;
-	margin: 0 auto;
-}
+	* {
+		box-sizing: border-box;
+	}
 
-.snapod-background {
-	background-image: linear-gradient(
-		120deg,
-		#ffb64661 0%,
-		rgba(9, 9, 121, 0) 50%,
-		#46d4ff36 100%
-	);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+	.page {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
 
-.snapod-feature-background-1 {
-	background: linear-gradient(
-			0deg,
-			rgba(29, 47, 67, 0.05) 19.16%,
-			rgba(196, 196, 196, 0) 59.55%
-		),
-		radial-gradient(
-			102.29% 81.78% at 50% 30%,
-			rgba(255, 255, 255, 0) 5%,
-			#d3dbe3 100%
+	.snapod-background {
+		background-image: linear-gradient(
+			120deg,
+			#ffb64661 0%,
+			rgba(9, 9, 121, 0) 50%,
+			#46d4ff36 100%
 		);
-}
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 
-button,
-input,
-select {
-	outline: none !important;
-}
+	.snapod-feature-background-1 {
+		background: linear-gradient(
+				0deg,
+				rgba(29, 47, 67, 0.05) 19.16%,
+				rgba(196, 196, 196, 0) 59.55%
+			),
+			radial-gradient(
+				102.29% 81.78% at 50% 30%,
+				rgba(255, 255, 255, 0) 5%,
+				#d3dbe3 100%
+			);
+	}
 
-.join-input-container {
-	width: 90%;
-	@apply lg:w-[500px];
-}
+	button,
+	input,
+	select {
+		outline: none !important;
+	}
 
-.nav {
-	@apply lg:bg-transparent backdrop-filter-none;
+	.join-input-container {
+		width: 90%;
+	}
 }
-
-/* .nav {
-    backdrop-filter: blur(6px);
-    background: rgb(255 255 255 / 70%);
-} */

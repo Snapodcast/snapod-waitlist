@@ -78,17 +78,17 @@ const Home = () => {
 				/>
 				<link
 					rel='icon'
-					href='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/favicon.ico'
+					href='https://storage.snapodcast.com/arweave/favicon.ico'
 				/>
 			</Head>
-			<section className='h-screen w-full snapod-background text-gray-700 mb-20 border-b'>
-				<nav className='flex page lg:pt-10 pt-14 lg:bg-transparent z-10 top-0 w-full lg:relative lg:pb-0 pb-3 shadow-none text-xl items-center justify-center nav'>
+			<section className='h-screen w-full snapod-background text-gray-700 mb-20 border-b border-gray-200'>
+				<nav className='flex page lg:pt-10 pt-14 lg:bg-transparent z-10 top-0 w-full lg:relative lg:pb-0 pb-3 shadow-none text-xl items-center justify-center backdrop-filter-none'>
 					<div
 						id='snapod-logo'
 						className='flex flex-1 gap-x-1.5 font-medium lg:text-xl text-2xl items-center text-gray-600 justify-center lg:justify-start'
 					>
 						<img
-							src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod_logo_v1.png'
+							src='https://storage.snapodcast.com/arweave/snapod_logo_v1.png'
 							className='lg:w-10 lg:h-10 w-20 h-20'
 						/>
 						<span className='hidden lg:block'>Snapod</span>
@@ -126,7 +126,7 @@ const Home = () => {
 							{t("twitter")}
 						</a>
 						<select
-							className='rounded-md bg-gray-300 bg-opacity-50 hover:bg-gray-300 transition-all pt-1 pb-1.5 px-2.5 text-gray-500 text-opacity-75 font-medium text-base'
+							className='rounded-md bg-gray-300/50 hover:bg-gray-300 transition-all pt-1 pb-1.5 px-2.5 text-gray-500 text-opacity-75 font-medium text-base'
 							defaultValue={lang}
 							onChange={(e) => {
 								changeLang(e.target.value);
@@ -162,13 +162,13 @@ const Home = () => {
 						</p>
 					</div>
 					<div className='mt-10 flex justify-center items-center'>
-						<div className='flex join-input-container whitespace-nowrap mx-12'>
+						<div className='flex lg:w-[500px] whitespace-nowrap mx-12'>
 							<input
 								onChange={(e) => {
 									setEmail(e.target.value);
 								}}
 								placeholder={t("email")}
-								className='border transition-all border-gray-300 hover:border-gray-400 shadow-sm lg:py-2 lg:px-5 py-1.5 px-2 lg:pl-4 pl-3 rounded-lg lg:text-base text-sm bg-white flex-1 outline-none focus:shadow-md'
+								className='border transition-all border-gray-300 hover:border-gray-400 shadow-xs lg:py-2 lg:px-5 py-1.5 px-2 lg:pl-4 pl-3 rounded-lg lg:text-base text-sm bg-white flex-1 outline-hidden focus:shadow-md'
 							/>
 							<button
 								onClick={() => {
@@ -176,7 +176,7 @@ const Home = () => {
 										doJoin();
 									}
 								}}
-								className='lg:block lg:min-w-[172.63px] hidden rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 lg:py-2 lg:px-5 py-1.5 px-4 text-sm text-white lg:text-base shadow-sm hover:shadow-md'
+								className='lg:block lg:min-w-[172.63px] hidden rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 lg:py-2 lg:px-5 py-1.5 px-4 text-sm text-white lg:text-base shadow-xs hover:shadow-md'
 							>
 								{processing
 									? t("headerJoining")
@@ -190,7 +190,7 @@ const Home = () => {
 										doJoin();
 									}
 								}}
-								className='lg:hidden block rounded-md bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 lg:py-2 lg:px-5 py-1.5 px-4 text-sm text-white lg:text-base shadow-sm hover:shadow-md'
+								className='lg:hidden block rounded-md cursor-pointer bg-gray-600 border border-gray-600 hover:bg-gray-700 transition-all ml-3 lg:py-2 lg:px-5 py-1.5 px-4 text-sm text-white lg:text-base shadow-xs hover:shadow-md'
 							>
 								{processing
 									? t("headerJoiningSmall")
@@ -203,7 +203,7 @@ const Home = () => {
 				</div>
 				<div className='mt-20 flex justify-center lg:px-0 px-8'>
 					<img
-						src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-editing-episodes.png'
+						src='https://storage.snapodcast.com/arweave/snapod-editing-episodes.png'
 						className='lg:rounded-3xl rounded-xl shadow-2xl border border-gray-300 lg:w-[952px]'
 					/>
 				</div>
@@ -283,7 +283,7 @@ const Home = () => {
 							{t("featureDes7")}
 						</p>
 						<img
-							src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/snapod-analytics.png'
+							src='https://storage.snapodcast.com/arweave/snapod-analytics.png'
 							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
@@ -298,7 +298,7 @@ const Home = () => {
 							{t("featureDes8")}
 						</p>
 						<img
-							src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/distributions.png'
+							src='https://storage.snapodcast.com/arweave/distributions.png'
 							className='rounded-xl shadow-md lg:h-80 lg:w-full'
 						/>
 					</div>
@@ -315,7 +315,7 @@ const Home = () => {
 				<div className='grid lg:grid-cols-2 grid-cols-1 gap-8 px-5'>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3'>
 						<div className='w-32 h-32 flex items-center'>
-							<img src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/appstore.png' />
+							<img src='https://storage.snapodcast.com/arweave/appstore.png' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
@@ -328,7 +328,7 @@ const Home = () => {
 					</div>
 					<div className='rounded-lg bg-gray-100 lg:py-6 py-2 lg:px-12 px-8 flex items-center gap-x-3.5'>
 						<div className='w-32 h-32 transform lg:translate-y-1.5 flex items-center'>
-							<img src='https://img.snapodcast.com/2dc1b6ef-7974-41bd-98fe-4c43ab6976cf-bucket/microsoftstore.png' />
+							<img src='https://storage.snapodcast.com/arweave/microsoftstore.png' />
 						</div>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
@@ -339,7 +339,7 @@ const Home = () => {
 							</p>
 						</div>
 					</div>
-					<div className='rounded-lg bg-gray-50 border lg:p-12 p-8'>
+					<div className='rounded-lg bg-gray-50 border border-gray-200 lg:p-12 p-8'>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
 								{t("web")}
@@ -349,7 +349,7 @@ const Home = () => {
 							</p>
 						</div>
 					</div>
-					<div className='rounded-lg bg-gray-50 border lg:p-12 p-8'>
+					<div className='rounded-lg bg-gray-50 border border-gray-200 lg:p-12 p-8'>
 						<div>
 							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
 								{t("mobile")}
@@ -361,84 +361,17 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
-			{/* <section className='lg:pt-40 pt-24 page'>
-				<div className='text-center mb-12'>
-					<p className='text-gray-500 mb-1'>Pricing</p>
-					<h1 className='text-4xl font-medium tracking-wide text-gray-700 mb-1'>
-						{t("pricing")}
-					</h1>
-					<p className='text-gray-400'>{t("pricingDes")}</p>
-				</div>
-				<div className='grid lg:grid-cols-5 grid-cols-1 gap-4 px-5'>
-					<div className='rounded-lg bg-gray-100 py-6 px-8 lg:px-10 flex items-center gap-x-6'>
-						<div>
-							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
-								{t("priceName1")}
-							</h2>
-							<p className='text-base lg:text-lg text-gray-500'>
-								{t("priceDes1")}
-							</p>
-						</div>
-					</div>
-					<div className='rounded-lg bg-gray-100 py-6 px-8 lg:px-10 flex items-center gap-x-6 lg:col-start-2 lg:col-end-4'>
-						<div>
-							<p className='lg:text-4xl text-3xl font-medium text-gray-600 border-2 border-gray-300 rounded-lg py-2.5 px-4'>
-								$0
-							</p>
-						</div>
-						<div>
-							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
-								{t("priceName2")}
-							</h2>
-							<p className='text-base lg:text-lg text-gray-500'>
-								{t("priceDes2")}
-							</p>
-						</div>
-					</div>
-					<div className='rounded-lg bg-gray-100 py-6 px-8 lg:px-10 flex items-center gap-x-6 lg:col-start-4 lg:col-end-6'>
-						<div>
-							<p className='lg:text-4xl text-3xl font-medium text-gray-600 border-2 border-gray-300 rounded-lg py-2.5 px-4'>
-								$5
-							</p>
-						</div>
-						<div>
-							<h2 className='text-xl lg:text-2xl font-medium text-gray-600 mb-1'>
-								{t("priceName3")}
-							</h2>
-							<p className='text-base lg:text-lg text-gray-500'>
-								{t("priceDes3")}
-							</p>
-						</div>
-					</div>
-				</div>
-			</section> */}
-			{/* <section className='lg:pt-40 pt-24 page flex items-center justify-center'>
-				<div className='flex gap-x-3'>
-					<a href='#'>
-						<button className='rounded-md bg-gray-300 bg-opacity-50 hover:bg-gray-300 transition-all ml-2 pt-1 pb-1.5 px-3.5 text-gray-500 text-opacity-75 font-medium text-base'>
-							{t("backToTop")}
-						</button>
-					</a>
-					<a
-						href='https://buttondown.email/helipeng?as_embed=true'
-						target='_blank'
-					>
-						<button className='rounded-md bg-gray-300 bg-opacity-50 hover:bg-gray-300 transition-all ml-2 pt-1 pb-1.5 px-3.5 text-gray-500 text-opacity-75 font-medium text-base'>
-							{t("navJoin")}
-						</button>
-					</a>
-				</div>
-			</section> */}
 			<section className='lg:pt-40 pt-24 page flex items-center justify-center'>
 				<a href='#'>
-					<button className='rounded-md bg-gray-300 bg-opacity-50 hover:bg-gray-300 transition-all ml-2 py-2 px-5 text-gray-500 text-opacity-75 font-medium text-lg'>
+					<button className='rounded-md cursor-pointer bg-gray-300/50 hover:bg-gray-300 transition-all ml-2 py-2 px-5 text-gray-500 text-opacity-75 font-medium text-lg'>
 						{t("comingSoon")}
 					</button>
 				</a>
 			</section>
-			<footer className='text-center lg:mt-40 mt-20 mb-10 border-t pt-10 text-gray-600'>
+			<footer className='text-center lg:mt-40 mt-20 mb-10 border-t border-gray-200 pt-10 text-gray-600'>
 				<p className='lg:text-base text-sm'>
-					&copy; 2021 Snapod | A project by Tony He (
+					&copy; 2021 - {new Date().getFullYear()} Snapod | A project by Tony He
+					(
 					<a
 						href='https://twitter.com/ttttonyhe'
 						target='_blank'

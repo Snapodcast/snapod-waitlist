@@ -45,7 +45,7 @@ const Home = () => {
 					body: JSON.stringify({
 						email: email,
 						name: email.split("@")[0],
-						list_uuids: ["060f023e-8c73-4c4a-b57b-df4b6d6eb3bf"],
+						list_uuids: ["412e5988-083f-4939-a31b-be793150fccc"],
 					}),
 				}
 			);
